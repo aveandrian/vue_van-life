@@ -1,0 +1,60 @@
+<template>
+  <main className="home-page">
+    <div className="home-page--content">
+      <h1 className="home-page--title">
+        You got the travel plans, we got the travel vans.
+      </h1>
+      <p className="home-page--description">
+        Add adventure to your life by joining the #vanlife movement. Rent the
+        perfect van to make your perfect road trip.
+      </p>
+      <router-link to="/vans" className="btn">Find your van</router-link>
+    </div>
+  </main>
+</template>
+
+<script setup lang="ts"></script>
+
+<style>
+.home-page {
+  flex: 1;
+  background: url('../assets/home-bg.svg') no-repeat 0 0 fixed;
+  /* -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; */
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-page--content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+  color: white;
+  max-width: 31.25rem;
+  padding: 0.625rem;
+}
+
+.home-page--title {
+  font-weight: 800;
+  font-size: 2.25rem;
+  margin-bottom: 0rem;
+}
+
+.home-page--description {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 2vh;
+}
+
+@media screen and (max-width: 59.375rem) {
+  .home-page {
+    padding-inline: 1.875rem;
+    text-align: center;
+  }
+}
+</style>

@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff7ed;
+}
+
+body {
+  height: 100%;
+  min-height: 100vh;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+  height: 90px;
+  background-color: #fff7ed;
+}
+
+.header--title {
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 25px;
+  color: #000000;
+  margin-right: auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+nav > a {
+  text-decoration: none;
+  color: #000000;
+}
+
+nav > a:hover {
+  text-decoration: underline;
+}
+
+.menu-btn {
+  display: none;
+}
+
+footer {
+  height: 75px;
+  width: auto;
+  background-color: #252525;
+  color: #aaaaaa;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
+
+.btn {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  background: #ff8c38;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.btn:hover {
+  transform: translate(1px, 1px);
+}
+
+.back--link:hover {
+  text-decoration: underline;
+  color: #201f1d;
+}
+
+.fallback-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fallback-page {
+  height: 100vh;
+}
+
+.fallback--content {
+  max-width: 500px;
+}
+
+.fallback-btn {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  background: #161616;
+  border-radius: 5px;
+  color: white;
+}
+
+@media screen and (max-width: 950px) {
+  #app {
+    overflow: hidden;
+  }
+  .header {
+    overflow: hidden;
+  }
+  .header--links {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: translateX(100%);
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20vh;
+    background: #fff7ed;
+    transition: 0.3s ease-in-out;
+  }
+
+  .header--links.opened {
+    transform: none;
+  }
+
+  .menu-btn,
+  .header--title {
+    display: block;
+    z-index: 2;
+  }
+}
