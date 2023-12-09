@@ -1,5 +1,5 @@
 <template>
-  <p v-for="(, i) in rating" :key="i">⭐</p>
+  <p v-for="(_, i) in rating" :key="i">⭐</p>
 </template>
 
 <script setup lang="ts">
