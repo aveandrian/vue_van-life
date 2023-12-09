@@ -5,6 +5,7 @@
 Stack: Vue, vue-router, Vite, Miragejs, Typescript
 
 ## Live demo:
+https://vue-vanlife.netlify.app
 
 ## Setup
 
